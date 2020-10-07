@@ -131,7 +131,7 @@ pub fn link() {
     if cfg!(target_os = "freebsd") {
         println!("cargo:rustc-flags=-l ffi -l ncursesw -l c++ -l z");
     } else if cfg!(target_os = "linux") {
-        println!("cargo:rustc-flags=-l ffi -l ncursesw -l stdc++ -l z");
+        println!("cargo:rustc-flags=-l ffi -l ncursesw -l libstdc++ -l z");
     } else if cfg!(target_os = "macos") {
         println!("cargo:rustc-flags=-l ffi -l ncurses -l c++ -l z");
     }
